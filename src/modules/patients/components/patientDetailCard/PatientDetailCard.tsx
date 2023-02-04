@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import QuestionModal from "../../../../components/questionModal/QuestionModal";
-import Gender from "../../../../config/models/entities/gender.enum";
+import Swal from "sweetalert2";
 import Patient from "../../../../config/models/entities/patient.entity";
 import Prescription from "../../../../config/models/entities/prescription.entity";
 import {
@@ -58,7 +58,12 @@ const PatientDetailCard = ({
   const handleOnPrescriptionSuccess = (prescription: Prescription) => {
     setPatientPrescriptions((prev) => prev.concat(prescription));
     setPrescriptionCreationVisible(!prescriptionCreationVisible);
-    alert("Medicina prescrita con éxito");
+    Swal.fire({
+      title: "Añadida!",
+      text: "Medicina prescrita con éxito",
+      icon: "success",
+      confirmButtonText: "Ok",
+    });
   };
 
   const handleOnDeleteVisible = () => {
@@ -71,11 +76,21 @@ const PatientDetailCard = ({
     deletePatient(patientId)
       .then((data) => {
         console.log(data);
-        alert("Eliminado correctamente");
+        Swal.fire({
+          title: "Eliminado!",
+          text: "El paciente se eliminó correctamente",
+          icon: "success",
+          confirmButtonText: "Ok",
+        });
         onPatientDeleted(patientId);
       })
       .catch((error) => {
-        alert("Fallo en la eliminación" + error.message);
+        Swal.fire({
+          title: "Fallo en la eliminación!",
+          text: error.message,
+          icon: "warning",
+          confirmButtonText: "Ok",
+        });
       });
 
     setPatientDeletionVisible(!patientDeletionVisible);

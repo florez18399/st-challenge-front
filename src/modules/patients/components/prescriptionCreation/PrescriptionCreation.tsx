@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-
+import Swal from "sweetalert2";
 import "./PrescriptionCreation.css";
 import Medicine from "../../../../config/models/entities/medicine.entity";
 import { getMedicinesList } from "../../../../config/services/general.services";
@@ -54,7 +54,12 @@ const PrescriptionCreation = ({
         onPrescriptionSucces(data);
       })
       .catch((error) => {
-        alert(error.message);
+        Swal.fire({
+          title: "No se prescribió la medicina!",
+          text: error.message,
+          icon: "warning",
+          confirmButtonText: "Ok",
+        });
       });
   };
 

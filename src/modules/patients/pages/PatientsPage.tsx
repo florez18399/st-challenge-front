@@ -96,7 +96,7 @@ const PatientsPage = () => {
 
   const handleOnPatientDeleted = (patientId: number) => {
     setPatientsList((prev) =>
-      prev.filter((patient) => patient.patientId != patientId)
+      prev.filter((patient) => patient.patientId !== patientId)
     );
     setPatientCardVisible(false);
   };
