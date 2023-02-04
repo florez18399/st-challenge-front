@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./InitialOption.css";
 
 type Props = {
   optionName: string;
@@ -15,10 +16,7 @@ const InitialOption = (props: Props) => {
 
   return (
     <div
-      style={{
-        backgroundColor:
-          "#" + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, "0"),
-      }}
+      className="initial-option"
       onClick={handleClick}
     >
       <h1>{props.optionName}</h1>

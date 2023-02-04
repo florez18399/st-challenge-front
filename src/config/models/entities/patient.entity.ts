@@ -5,5 +5,5 @@ export default interface Patient {
   firstName: string;
   lastName: string;
   birthDate: Date;
-  gender: Gender;
+  gender?: Gender;
 }

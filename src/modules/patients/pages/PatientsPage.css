@@ -1,0 +1,35 @@
+.patients-page {
+  width: 100%;
+  padding: 2%;
+}
+
+.patients-page__controls {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.patients-page__controls > * {
+  min-width: 15rem;
+}
+
+.patient-page__patient-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2%;
+}
+
+.patients-page__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.patients-page__buttons > * {
+  margin: 0 4%;
+}

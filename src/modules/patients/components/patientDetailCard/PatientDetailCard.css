@@ -1,0 +1,37 @@
+.patient_card {
+  width: 83%;
+  height: 83%;
+  display: flex;
+  
+  flex-wrap: wrap;
+}
+
+.patient_card__info {
+  display: flex;
+}
+
+.patient_card__info__data {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 50%;
+  justify-content: center;
+}
+
+.patient_card__info__data-title {
+  font-weight: bold;
+  color: #3e8ed0;
+}
+
+.patient_card__controls {
+  padding: 0 10%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.patient_card__controls > * {
+  width: 100%;
+  margin-bottom: 2%;
+}

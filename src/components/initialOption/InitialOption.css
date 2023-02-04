@@ -1,0 +1,13 @@
+.initial-option {
+  border-radius: 15px;
+  padding: 2rem;
+  background-image: linear-gradient(to left, #1f8b5b, #70d77e);
+  width: 250px;
+  height: 230px;
+  margin: 15px 15px;
+}
+
+.initial-option:hover {
+  transform: scale(1.065);
+  cursor: pointer;
+}
